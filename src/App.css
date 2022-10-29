@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(239, 240, 255);
+  background: linear-gradient(to bottom, #cc66ff 0%, #6699ff 100%);
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;

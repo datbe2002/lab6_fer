@@ -46,8 +46,10 @@ export default function ContactForm() {
                     name="name"
                     value={formik.values.name}
                     onChange={formik.handleChange}
+                    error={formik.touched.name && Boolean(formik.errors.name)}
+                    helperText={formik.touched.name && formik.errors.name}
                 />
-                {formik.errors.name && (<Typography variant="caption" color="red">{formik.errors.name}</Typography>)}
+                {/* {formik.errors.name && (<Typography variant="caption" color="red">{formik.errors.name}</Typography>)} */}
                 <TextField
                     id="outlined-multiline-static"
                     multiline
@@ -55,8 +57,10 @@ export default function ContactForm() {
                     name="email"
                     value={formik.values.email}
                     onChange={formik.handleChange}
+                    error={formik.touched.email && Boolean(formik.errors.email)}
+                    helperText={formik.touched.email && formik.errors.email}
                 />
-                {formik.errors.email && (<Typography variant="caption" color="red">{formik.errors.email}</Typography>)}
+                {/* {formik.errors.email && (<Typography variant="caption" color="red">{formik.errors.email}</Typography>)} */}
                 <TextField
                     id="outlined-multiline-static"
                     multiline
@@ -64,8 +68,10 @@ export default function ContactForm() {
                     name="phone"
                     value={formik.values.phone}
                     onChange={formik.handleChange}
+                    error={formik.touched.phone && Boolean(formik.errors.phone)}
+                    helperText={formik.touched.phone && formik.errors.phone}
                 />
-                {formik.errors.phone && (<Typography variant="caption" color="red">{formik.errors.phone}</Typography>)}
+                {/* {formik.errors.phone && (<Typography variant="caption" color="red">{formik.errors.phone}</Typography>)} */}
                 <FormControl sx={{ m: 1, mt: 3 }}>
                     <InputLabel id="demo-simple-select-autowidth-label">Program of Study</InputLabel>
                     <Select
@@ -75,6 +81,8 @@ export default function ContactForm() {
                         name="program"
                         value={formik.values.program}
                         onChange={formik.handleChange}
+                        error={formik.touched.program && Boolean(formik.errors.program)}
+                        helperText={formik.touched.program && formik.errors.program}
                     >
                         <MenuItem value={0}>
                             <em>Choose 1 program</em>
@@ -87,7 +95,7 @@ export default function ContactForm() {
                         <MenuItem value={"Digital Art & Design"}>Digital Art & Design</MenuItem>
                     </Select>
                 </FormControl>
-                {formik.errors.program && (<Typography variant="caption" color="red">{formik.errors.program}</Typography>)}
+                {/* {formik.errors.program && (<Typography variant="caption" color="red">{formik.errors.program}</Typography>)} */}
                 <TextField
                     id="outlined-multiline-static"
                     label="Message"
@@ -96,12 +104,16 @@ export default function ContactForm() {
                     rows={4}
                     value={formik.values.message}
                     onChange={formik.handleChange}
+                    error={formik.touched.message && Boolean(formik.errors.message)}
+                    helperText={formik.touched.message && formik.errors.message}
                 />
-                {formik.errors.message && (<Typography variant="caption" color="red">{formik.errors.message}</Typography>)}
+                {/* {formik.errors.message && (<Typography variant="caption" color="red">{formik.errors.message}</Typography>)} */}
                 <FormControlLabel control={<Checkbox />} label="Agree to terms and conditions." name='agree'
-                    value={formik.values.agree} onClick={formik.handleChange} />
+                    value={formik.values.agree} onClick={formik.handleChange}
+                    error={formik.touched.agree && Boolean(formik.errors.agree)}
+                    helperText={formik.touched.agree && formik.errors.agree} />
 
-                {formik.errors.agree && (<Typography variant="caption" color="red">{formik.errors.agree}</Typography>)}
+                {/* {formik.errors.agree && (<Typography variant="caption" color="red">{formik.errors.agree}</Typography>)} */}
                 <Button sx={{
                     backgroundColor: "#236DC9", color: "white", fontWeight: "bold", "&:hover": {
                         backgroundColor: "#154178"

@@ -114,8 +114,13 @@ export default function UserInput() {
                                             </DialogContentText>
                                         </DialogContent>
                                         <DialogActions>
-                                            <Button onClick={handleClose}>No</Button>
-                                            <Button onClick={() => handleDeleteUser(user.id)} autoFocus>
+                                            <Button onClick={handleClose}>Cancel</Button>
+                                            <Button sx={{
+                                                backgroundColor: "#1976D2", color: "white", fontWeight: "bold", "&:hover": {
+                                                    color: 'white',
+                                                    backgroundColor: '#0b5394'
+                                                },
+                                            }} onClick={() => handleDeleteUser(user.id)} autoFocus>
                                                 Yes
                                             </Button>
                                         </DialogActions>
