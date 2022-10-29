@@ -77,7 +77,7 @@ export default function ContactForm() {
                         onChange={formik.handleChange}
                     >
                         <MenuItem value={0}>
-                            <em>Please select</em>
+                            <em>Choose 1 program</em>
                         </MenuItem>
                         <MenuItem value={"Software Engineering"}>Software Engineering</MenuItem>
                         <MenuItem value={"Information System"}>Information System</MenuItem>

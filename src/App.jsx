@@ -15,7 +15,11 @@ function App() {
 
               {!isToggled ? (<>
                 <h2>Hi, this is a Form click the button to open the form</h2>
-                <Button sx={{ justifyItems: "center" }} onClick={() => setIsToggled(!isToggled)}>Add a information</Button></>) : (<ContactForm />)}
+                <Button sx={{
+                  backgroundColor: "#236DC9", color: "white", fontWeight: "bold", "&:hover": {
+                    backgroundColor: "#154178"
+                  }
+                }} onClick={() => setIsToggled(!isToggled)}>Add a information</Button></>) : (<ContactForm />)}
             </Grid>
             <Grid item xs={11}>
               <UserInput />
